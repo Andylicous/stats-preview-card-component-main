@@ -1,0 +1,147 @@
+:root {
+  --very-dark-blue: hsl(233, 47%, 7%);
+  --dark-desaturated-blue: hsl(244, 38%, 16%);
+  --soft-violet: hsl(277, 64%, 61%);
+  --white: hsl(0, 0%, 100%);
+  --slightly-transparent-white-paragraph: hsla(0, 0%, 100%, 0.75);
+  --slightly-transparent-white-headings: hsla(0, 0%, 100%, 0.6);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+body {
+  background-color: var(--very-dark-blue);
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  padding: 88px 24px;
+}
+
+main {
+  padding-bottom: 24px;
+}
+
+.attribution {
+  color: var(--white);
+}
+
+.content {
+  background-color: var(--dark-desaturated-blue);
+  text-align: center;
+}
+
+.content__img {
+  background-image: url(/images/image-header-mobile.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: multiply;
+  background-color: var(--soft-violet);
+  border-radius: 8px 8px 0 0;
+  width: 100%;
+  height: 240px;
+  margin-bottom: 48px;
+}
+
+.card__copy {
+  padding: 0px 34px;
+}
+
+.card__title {
+  color: var(--white);
+  font-size: 28px;
+  margin-top: 0;
+  margin-bottom: 28px;
+}
+
+.highlight {
+  color: var(--soft-violet);
+}
+
+.card__paragraph {
+  font-size: 15px;
+  line-height: 25px;
+  color: var(--slightly-transparent-white-paragraph);
+  margin-top: 0;
+  margin-bottom: 52px;
+}
+
+.stats__companies,
+.stats_templates,
+.stats_queries {
+  padding-bottom: 36px;
+}
+
+.stats__title {
+  color: var(--white);
+  font-size: 24px;
+  margin-top: 0;
+  margin-bottom: 14px;
+}
+
+.stats__copy {
+  color: var(--slightly-transparent-white-paragraph);
+  margin: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .content__img {
+    background-image: url(/images/image-header-desktop.jpg);
+    height: 480px;
+  }
+
+  .stats {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: left;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+  .container {
+    width: 1080px;
+  }
+  .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card__copy {
+    order: 1;
+    text-align: left;
+  }
+
+  .card__title {
+    font-size: 37px;
+    letter-spacing: -0.015em;
+  }
+
+  .content__img {
+    order: 2;
+    height: 446px;
+    margin-bottom: 0;
+  }
+
+  .stats {
+    align-items: flex-start;
+  }
+}
