@@ -115,6 +115,7 @@ main {
     justify-content: center;
     align-items: center;
     flex-direction: row;
+    height: 100vh;
   }
   .container {
     width: 1080px;
@@ -126,6 +127,7 @@ main {
   }
 
   .card__copy {
+    flex: 0 1 50%;
     order: 1;
     text-align: left;
   }
@@ -136,6 +138,7 @@ main {
   }
 
   .content__img {
+    flex: 0 1 50%;
     order: 2;
     height: 446px;
     margin-bottom: 0;
